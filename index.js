@@ -5,9 +5,9 @@ const sqlite = require('sqlite')
 const sqlite3 = require('sqlite3')
 
 const dbConnection = sqlite.open({
-    filename : ('./banco.sqlite', { Priomise}),
+    filename : './banco.sqlite',
     driver: sqlite3.Database
-})
+}, { Priomise})
 const path = require('path')
 
 const port = process.env.PORT || 3000
