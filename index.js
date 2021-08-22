@@ -5,7 +5,7 @@ const sqlite = require('sqlite')
 const sqlite3 = require('sqlite3')
 
 const dbConnection = sqlite.open({
-    filename : './banco.sqlite',
+    filename : path.resolve(__dirname,'./banco.sqlite'),
     driver: sqlite3.Database
 })
 const path = require('path')
