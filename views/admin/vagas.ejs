@@ -1,0 +1,17 @@
+<%- include('header') %>
+   <h2>Admin Vagas:
+       <a href="/admin/vagas/nova">Nova vaga</a>
+   </h2>
+<div>
+        <ul>
+            <% vagas.forEach(vagas => { %> 
+            <li>
+                <%- vagas.titulo %>
+                <a href="/admin/vagas/editar/<%- vagas.id %> ">Editar</a>
+                <a href="/admin/vagas/delete/<%- vagas.id %>" onclick=" return confirm('Deseja excluir a vaga <%= vagas.titulo %>?')">Excluir</a>
+            </li>
+            <% }) %> 
+        </ul>
+</div>
+      
+<%- include('footer') %>

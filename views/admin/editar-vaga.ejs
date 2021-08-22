@@ -1,0 +1,23 @@
+<%- include('header') %>
+   <h2>Editar Vaga:
+       <a href="/admin/vagas">Vagas</a>
+   </h2>
+<div>
+     <form method="POST">
+         <label for="titulo">Título</label>
+         <input type="text" id="titulo" name="titulo" value="<%- vaga.titulo %>"/>
+         <br>
+         <label for="descricao">Descrição</label>
+         <textarea id="descricao" name="descricao"><%- vaga.descricao %></textarea>
+         <br>
+         <label for="categoria">Categoria:</label>
+         <select id="categoria" name="categoria" >
+             <% categorias.forEach(cat => { %> 
+            <option value="<%= cat.id %>"<% if(cat.id == vaga.categoria){ %> selected <% } %>><%= cat.categoria %></option>
+            <%  }); %> 
+         </select>
+         <button>Salvar Vaga</button>
+     </form>
+</div>
+      
+<%- include('footer') %>

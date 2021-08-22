@@ -1,0 +1,22 @@
+{
+  "name": "jobify",
+  "version": "1.0.0",
+  "description": "Jofiby is a simnple job board for sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "keywords": [
+    "jobify",
+    "job"
+  ],
+  "author": "Danilo Nascimento",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "sqlite": "^4.0.23",
+    "sqlite3": "^5.0.2"
+  }
+}
